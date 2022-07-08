@@ -5,7 +5,7 @@
 # Отримуємо і виводимо весь список контактів у вигляді таблиці (console.table)
 node index.js --action list
 <br/>
-<img src="https://monosnap.com/file/mahZgS4RglF19XNkFmErUPqIpmFT0g"/>
+<img src="https://api.monosnap.com/file/download?id=mahZgS4RglF19XNkFmErUPqIpmFT0g"/>
 <br/>
 ### Отримуємо контакт по id
 node index.js --action get --id 5
