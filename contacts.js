@@ -2,7 +2,7 @@ const fs = require("fs/promises");
 const path = require("path");
 const ObjectID = require("bson-objectid");
 
-const contactsPath = path.join(__dirname, "contacts.json");
+const contactsPath = path.join(__dirname, "./db/contacts.json");
 const updateContactsList = async (contacts)=> {
     await fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
 }
@@ -15,7 +15,7 @@ const listContacts = async () => {
 
 const getContactById = async (contactId) => {
     const contacts = await listContacts();
-    const result = contacts.find(item => item.id === id);
+    const result = contacts.find(item => item.id === contactId);
     if(!result){
         return null;
     }
