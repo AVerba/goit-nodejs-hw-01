@@ -43,5 +43,13 @@ program
 program.parse(process.argv);
 
 const options = program.opts();
-invokeAction(options);
 
+const start = async (argv) => {
+    try {
+        await invokeAction(argv);
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+start(options);
